@@ -45,7 +45,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.platform }}-audio_feature_extractor
-          path: dist/audio_feature_extractor
+          path: dist/audio_feature_extractor*
 
   release:
     needs: build
