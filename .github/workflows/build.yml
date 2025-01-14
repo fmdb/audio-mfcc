@@ -39,14 +39,14 @@ jobs:
 
       - name: Build Binary
         run: |
-          pyinstaller app.py --onefile --collect-data click --collect-data librosa --name audio_feature_extractor --log-level=DEBUG
+          pyinstaller audio_mfcc.spec --log-level=DEBUG
         shell: bash
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.platform }}-audio_feature_extractor
-          path: dist/audio_feature_extractor*
+          name: ${{ matrix.platform }}-fmdb_audio_mfcc
+          path: dist/fmdb_audio_mfcc*
 
   release:
     needs: build

@@ -38,7 +38,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='audio_mfcc',
+    name='fmdb_audio_mfcc',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
