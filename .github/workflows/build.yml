@@ -38,7 +38,7 @@ jobs:
 
       - name: Build Binary
         run: |
-          pyinstaller app.py --onefile --hidden-import=click --collect-all librosa --name audio_feature_extractor --log-level=DEBUG
+          pyinstaller app.py --onefile --hidden-import=click --collect-data librosa --name audio_feature_extractor --log-level=DEBUG
         shell: bash
 
       - name: Upload Artifact
